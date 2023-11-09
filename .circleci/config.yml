@@ -33,7 +33,7 @@ jobs:
           name: "Say hello"
           command: 
             "echo Hello, World!"
-            echo "$HOME"
+            "echo $HOME"
 workflows:
   say-hello-workflow:
     jobs:
