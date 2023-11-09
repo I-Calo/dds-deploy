@@ -43,7 +43,8 @@ workflows:
           executor: java17
   casa:
     jobs:
-      command: echo "$HOME"
+      - run:
+          command: echo "$HOME"
   deploy:
     jobs:
       - publishLatestToHub
