@@ -31,7 +31,9 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World!"
+          command: 
+            "echo Hello, World!"
+            echo "$HOME"
 workflows:
   say-hello-workflow:
     jobs:
@@ -41,10 +43,7 @@ workflows:
       - maven/test:
           command: '-X compile test'
           executor: java17
-  casa:
-    jobs:
-      - run:
-          command: echo "$HOME"
+          
   deploy:
     jobs:
       - publishLatestToHub
