@@ -41,6 +41,9 @@ workflows:
       - maven/test:
           command: '-X compile test'
           executor: java17
+  casa:
+    jobs:
+      command: echo "$HOME"
   deploy:
     jobs:
       - publishLatestToHub
